@@ -1,26 +1,21 @@
 {
-    "name": "MH Info Bot",
-    "description": "A simple Info telegram bot",
-    "logo": "https://telegra.ph/file/236794ce4bb2213eaae1e.jpg",
-    "repository": "https://github.com/TeleGraMaN/MHiNFoBoT",
+    "name": "Calculator-Bot",
+    "description": "A telegram calculator bot",
+    "repository": "https://github.com/Mega-Hero/Calculator",
     "keywords": [
-        "telegram",
-        "pyrogram",
-        "info",
-        "bot"
+        "calculator",
+        "telegram bot",
+        "pyrogram"
     ],
     "env": {
         "BOT_TOKEN": {
-            "description": "Your Bot token from @Botfather"
-            "value": "5468207644:AAFqpiE8zuOcEZA2NNkBxrnyU5tCPzVOOJE"
+            "description": "How To Get @botfather"
         },
         "API_ID": {
-            "description": "Your API_ID from https://my.telegram.org/apps"
-            "value": "7175298"
+            "description": "How To Get my.telegram.org"
         },
         "API_HASH": {
-            "description": "Your API_HASH from https://my.telegram.org/apps"
-            "value": "ad1791ee9e640932900fcbf878bf0cae"
+            "description": "How To Get my.telegram.org"
         }
     },
     "buildpacks": [
