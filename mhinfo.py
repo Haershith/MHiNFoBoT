@@ -12,7 +12,8 @@ Bot = Client(
 
 
 MHSTART = """
-text = "--**MH User Details:**--
+**MH User Details:**
+
 **First Name:** `{user.first_name}`
 **Last Name:** `{user.last_name},`" if user.last_name else "
 **User Id:** `{user.id}`
