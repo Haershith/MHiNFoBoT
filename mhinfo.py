@@ -74,3 +74,5 @@ async def info(bot, update):
 async def stickers(_, message):
        await message.reply(f"Your Requested Sticker's ID is   * `{message.sticker.file_id}` *", quote=True)
    
+print("Bot Started!!! Now Join on @MutyalaHarshith")
+Bot.run()
