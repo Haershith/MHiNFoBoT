@@ -36,7 +36,7 @@ I am a Simple Telegram Info Bot, Click /help for more information<b>"""
 
 
 BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="💞 Join", url=f"https://t.me/MutyalaHarshith"),
-                                 InlineKeyboardButton(text="Support", url=f"https://t.me/MHGcHaT"]])
+                                 InlineKeyboardButton(text="Support", url=f"https://t.me/MHGcHaT")]])
 
 
 @Bot.on_message(filters.private & filters.command("start"))
