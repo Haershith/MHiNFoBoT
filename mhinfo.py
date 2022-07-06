@@ -11,25 +11,6 @@ Bot = Client(
 )
 
 
-MHSTART = """
-**MH User Details:**
-
-**First Name:** `{user.first_name}`
-**Last Name:** `{user.last_name},`" if user.last_name else "
-**User Id:** `{user.id}`
-**Username:** @{user.username}" if user.username else "
-**User Link:** {user.mention}" if user.username else "
-**DC ID:** `{user.dc_id}`" if user.dc_id else "
-**Is Deleted:** True" if user.is_deleted else "
-**Is Bot:** True" if user.is_bot else "
-**Is Verified:** True" if user.is_verified else "
-**Is Restricted:** True" if user.is_verified else "
-**Is Scam:** True" if user.is_scam else "
-**Is Fake:** True" if user.is_fake else "
-**Is Support:** True" if user.is_support else "
-**Language Code:** {user.language_code}" if user.language_code else "
-**Status:** {user.status}" if user.status else "
-"""
 
 START_TEXT = """<b>Hello {}
 I am a Simple Telegram Info Bot, Click /help for more information<b>"""
@@ -41,9 +22,13 @@ BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="💞 Join", url=f"ht
 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start(bot, update):
-    await update.reply_text(
-        text=START_TEXT.format(update.from_user.mention),
-        disable_web_page_preview=True,
+    await update.reply_chat_action("Typing")
+   m=await message.reply_sticker("CAACAgUAAxkBAAMrYsTy6K5luiECuNQdOdbbTyy1_WcAAp4DAAJtpXBVnYBIpxLU0xweBA")
+    await asyncio.sleep(1)
+    await m.delete()
+    await message.reply_photo(
+        photo="https://telegra.ph/file/236794ce4bb2213eaae1e.jpg",
+        caption=START_TEXT.format(update.from_user.mention),
         reply_markup=BUTTONS
     )
 
