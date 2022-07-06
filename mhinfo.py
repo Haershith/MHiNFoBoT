@@ -35,7 +35,8 @@ START_TEXT = """<b>Hello {}
 I am a Simple Telegram Info Bot, Click /help for more information<b>"""
 
 
-BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="💞 Join", url=f"https://t.me/MutyalaHarshith")]])
+BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="💞 Join", url=f"https://t.me/MutyalaHarshith"),
+                                 InlineKeyboardButton(text="Support, url=f"https://t.me/MHGcHaT"]])
 
 
 @Bot.on_message(filters.private & filters.command("start"))
@@ -62,7 +63,16 @@ async def info(bot, update):
 **😎 Your Second Name :** {update.from_user.last_name if update.from_user.last_name else 'None'}
 **🥳 Your Username :** {update.from_user.username}
 **😜 Your Telegram ID :** {update.from_user.id}
-**🤫 Your Profile Link :** {update.from_user.mention}"""
+**🤫 Your Profile Link :** {update.from_user.mention}
+
+**First Name:** {user.first_name}
+**User Id:** {user.id}
+**Username:** @{user.username}
+**User Link:** {user.mention}
+**DC ID:** {user.dc_id}
+**Language Code:** {user.language_code}
+**Status:** {user.status}
+"""
     
     await update.reply_text(        
         text=text,
