@@ -24,7 +24,7 @@ BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="💞 Join", url=f"ht
 @Bot.on_message(filters.private & filters.command("start"))
 async def start(bot, update):
     await update.reply_chat_action("Typing")
-   m=await message.reply_sticker("CAACAgUAAxkBAAMrYsTy6K5luiECuNQdOdbbTyy1_WcAAp4DAAJtpXBVnYBIpxLU0xweBA")
+    await message.reply_sticker("CAACAgUAAxkBAAIalGLE9oYp8uXULytxu4OyVDWmIzK4AALfAAMulAABVkmUkirdqMRQHgQ")
     await asyncio.sleep(1)
     await m.delete()
     await message.reply_photo(
