@@ -23,10 +23,6 @@ BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="💞 Join", url=f"ht
 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start(bot, update):
-    await update.reply_chat_action("Typing")
-    await message.reply_sticker("CAACAgUAAxkBAAIalGLE9oYp8uXULytxu4OyVDWmIzK4AALfAAMulAABVkmUkirdqMRQHgQ")
-    await asyncio.sleep(1)
-    await m.delete()
     await message.reply_photo(
         photo="https://telegra.ph/file/236794ce4bb2213eaae1e.jpg",
         caption=START_TEXT.format(update.from_user.mention),
